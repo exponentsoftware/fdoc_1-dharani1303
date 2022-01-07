@@ -1,0 +1,8 @@
+const paragraph =
+  'I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.';
+const countWords1 = (para, wrd) => {
+  const pattern = new RegExp(wrd, 'gi'); //creating regex object using RegExp constructor
+  const matches = para.match(pattern) || []; // if the para.match returns null, matches result will be en empty array
+  return matches.length; // geting the length of the array
+};
+console.log(countWords1(paragraph, 'love'));
